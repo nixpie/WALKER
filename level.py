@@ -59,12 +59,16 @@ class Level:
     def create_attack(self):
         self.current_attack = Weapon(self.player, [self.visible_sprites])
 
+    def create_magic(self,style,strength,cost):
+        print(style)
+        print(strength)
+        print(cost)
+
     def destroy_attack(self):
         if self.current_attack:
             self.current_attack.kill()
         self.current_attack = None
 
-    
     def run(self):
         # update and draw the game
         self.visible_sprites.custom_draw(self.player)
